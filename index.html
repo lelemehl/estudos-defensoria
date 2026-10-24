@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>DPE-SP | Questões comentadas</title>
+
+  <meta
+    name="description"
+    content="Estude para a Defensoria Pública com questões objetivas comentadas."
+  >
+
+  <link rel="stylesheet" href="./style.css">
+  <script src="./script.js" defer></script>
+</head>
+
+<body>
+  <header class="cabecalho">
+    <div class="container">
+      <span class="etiqueta">PREPARAÇÃO PARA A DEFENSORIA</span>
+
+      <h1>DPE-SP <span>Questões comentadas</span></h1>
+
+      <p>
+        Escolha uma matéria, responda e entenda cada alternativa.
+      </p>
+    </div>
+  </header>
+
+  <main class="container">
+    <section class="aviso" aria-label="Sobre o material">
+      <strong>Material independente de estudo</strong>
+
+      <p>
+        As questões deste banco são autorais.
+        Não são transcrições de provas anteriores.
+        Neste treino, cada acerto vale 1 ponto.
+      </p>
+
+      <p>
+        A prioridade 1 ou 2 indica sua preferência de estudo.
+        Ela não altera os pontos e não representa peso oficial.
+      </p>
+    </section>
+
+    <section class="estatisticas" aria-label="Seu desempenho">
+      <article>
+        <span id="totalQuestoes">0</span>
+        <p>Questões disponíveis</p>
+      </article>
+
+      <article>
+        <span id="respondidas">0</span>
+        <p>Questões respondidas</p>
+      </article>
+
+      <article>
+        <span id="acertos">0</span>
+        <p>Acertos na última tentativa</p>
+      </article>
+
+      <article>
+        <span id="aproveitamento">0%</span>
+        <p>Aproveitamento</p>
+      </article>
+    </section>
+
+    <section class="secao">
+      <div class="titulo-secao">
+        <div>
+          <h2>Questões por matéria</h2>
+          <p>Escolha uma matéria para começar.</p>
+        </div>
+
+        <button id="treinarTodas" class="botao secundario" type="button">
+          Treinar todas
+        </button>
+      </div>
+
+      <div id="materias" class="grade-materias"></div>
+    </section>
+
+    <section id="areaQuiz" class="secao" aria-labelledby="tituloQuiz">
+      <div class="titulo-secao">
+        <div>
+          <span class="etiqueta escura">TREINO OBJETIVO</span>
+          <h2 id="tituloQuiz">Todas as matérias</h2>
+        </div>
+
+        <span id="contador" class="selo"></span>
+      </div>
+
+      <div class="filtros">
+        <label for="filtroMateria">
+          Matéria
+
+          <select id="filtroMateria">
+            <option value="todas">Todas as matérias</option>
+          </select>
+        </label>
+
+        <label class="checkbox">
+          <input id="somenteErros" type="checkbox">
+          Somente questões que errei
+        </label>
+      </div>
+
+      <progress id="barraProgresso" value="0" max="1">
+        Progresso do treino
+      </progress>
+
+      <article id="questao" class="cartao-questao"></article>
+
+      <div
+        id="feedback"
+        class="feedback"
+        aria-live="polite"
+        aria-atomic="true"
+      ></div>
+
+      <div class="acoes">
+        <button id="conferir" class="botao" type="button">
+          Conferir resposta
+        </button>
+
+        <button id="proxima" class="botao secundario" type="button" hidden>
+          Próxima questão
+        </button>
+      </div>
+    </section>
+
+    <section class="secao">
+      <h2>Seu progresso</h2>
+
+      <p>
+        O progresso fica salvo neste navegador.
+        Para continuar em outro aparelho, exporte e depois importe o arquivo.
+      </p>
+
+      <div class="acoes">
+        <button id="exportar" class="botao secundario" type="button">
+          Exportar progresso
+        </button>
+
+        <label class="botao secundario importar">
+          Importar progresso
+          <input id="importar" type="file" accept=".json,application/json">
+        </label>
+
+        <button id="limpar" class="botao perigo" type="button">
+          Apagar progresso
+        </button>
+      </div>
+
+      <p id="mensagem" role="status"></p>
+    </section>
+  </main>
+
+  <footer class="rodape container">
+    <p>
+      DPE-SP — ferramenta independente de estudo, sem vínculo institucional.
+      Confira sempre o edital e a legislação aplicável.
+    </p>
+  </footer>
+</body>
+</html>
